@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: b8991ccded4e1394080dbd9a970a89a2
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Kettlebell10kg
+    100002: Kettlebell16kg
+    100004: Kettlebell20kg
+    100006: Kettlebell24kg
+    100008: Kettlebell28kg
+    100010: Kettlebell32kg
+    100012: Kettlebell36kg
+    100014: Kettlebell40kg
+    100016: Kettlebell44kg
+    100018: Kettlebell48kg
+    100020: Kettlebell6kg
+    100022: //RootNode
+    100024: UCX_Kettlebell10kg
+    100026: UCX_Kettlebell16kg
+    100028: UCX_Kettlebell20kg
+    100030: UCX_Kettlebell24kg
+    100032: UCX_Kettlebell28kg
+    100034: UCX_Kettlebell32kg
+    100036: UCX_Kettlebell36kg
+    100038: UCX_Kettlebell40kg
+    100040: UCX_Kettlebell44kg
+    100042: UCX_Kettlebell48kg
+    100044: UCX_Kettlebell6kg
+    400000: Kettlebell10kg
+    400002: Kettlebell16kg
+    400004: Kettlebell20kg
+    400006: Kettlebell24kg
+    400008: Kettlebell28kg
+    400010: Kettlebell32kg
+    400012: Kettlebell36kg
+    400014: Kettlebell40kg
+    400016: Kettlebell44kg
+    400018: Kettlebell48kg
+    400020: Kettlebell6kg
+    400022: //RootNode
+    400024: UCX_Kettlebell10kg
+    400026: UCX_Kettlebell16kg
+    400028: UCX_Kettlebell20kg
+    400030: UCX_Kettlebell24kg
+    400032: UCX_Kettlebell28kg
+    400034: UCX_Kettlebell32kg
+    400036: UCX_Kettlebell36kg
+    400038: UCX_Kettlebell40kg
+    400040: UCX_Kettlebell44kg
+    400042: UCX_Kettlebell48kg
+    400044: UCX_Kettlebell6kg
+    2100000: MAT_KettlebellSet
+    2100002: lambert1
+    2300000: Kettlebell10kg
+    2300002: Kettlebell16kg
+    2300004: Kettlebell20kg
+    2300006: Kettlebell24kg
+    2300008: Kettlebell28kg
+    2300010: Kettlebell32kg
+    2300012: Kettlebell36kg
+    2300014: Kettlebell40kg
+    2300016: Kettlebell44kg
+    2300018: Kettlebell48kg
+    2300020: Kettlebell6kg
+    2300022: UCX_Kettlebell10kg
+    2300024: UCX_Kettlebell16kg
+    2300026: UCX_Kettlebell20kg
+    2300028: UCX_Kettlebell24kg
+    2300030: UCX_Kettlebell28kg
+    2300032: UCX_Kettlebell32kg
+    2300034: UCX_Kettlebell36kg
+    2300036: UCX_Kettlebell40kg
+    2300038: UCX_Kettlebell44kg
+    2300040: UCX_Kettlebell48kg
+    2300042: UCX_Kettlebell6kg
+    3300000: Kettlebell10kg
+    3300002: Kettlebell16kg
+    3300004: Kettlebell20kg
+    3300006: Kettlebell24kg
+    3300008: Kettlebell28kg
+    3300010: Kettlebell32kg
+    3300012: Kettlebell36kg
+    3300014: Kettlebell40kg
+    3300016: Kettlebell44kg
+    3300018: Kettlebell48kg
+    3300020: Kettlebell6kg
+    3300022: UCX_Kettlebell10kg
+    3300024: UCX_Kettlebell16kg
+    3300026: UCX_Kettlebell20kg
+    3300028: UCX_Kettlebell24kg
+    3300030: UCX_Kettlebell28kg
+    3300032: UCX_Kettlebell32kg
+    3300034: UCX_Kettlebell36kg
+    3300036: UCX_Kettlebell40kg
+    3300038: UCX_Kettlebell44kg
+    3300040: UCX_Kettlebell48kg
+    3300042: UCX_Kettlebell6kg
+    4300000: Kettlebell48kg
+    4300002: UCX_Kettlebell48kg
+    4300004: Kettlebell44kg
+    4300006: UCX_Kettlebell44kg
+    4300008: Kettlebell40kg
+    4300010: UCX_Kettlebell40kg
+    4300012: Kettlebell36kg
+    4300014: UCX_Kettlebell36kg
+    4300016: Kettlebell32kg
+    4300018: UCX_Kettlebell32kg
+    4300020: Kettlebell28kg
+    4300022: UCX_Kettlebell28kg
+    4300024: Kettlebell24kg
+    4300026: UCX_Kettlebell24kg
+    4300028: Kettlebell20kg
+    4300030: UCX_Kettlebell20kg
+    4300032: Kettlebell16kg
+    4300034: UCX_Kettlebell16kg
+    4300036: Kettlebell10kg
+    4300038: UCX_Kettlebell10kg
+    4300040: Kettlebell6kg
+    4300042: UCX_Kettlebell6kg
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

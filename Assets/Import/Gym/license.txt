@@ -1,0 +1,8 @@
+Model Information:
+* title:	Gym
+* source:	https://sketchfab.com/3d-models/gym-fbd1baf5f56743e6bd4299ad91473b9a
+* author:	Janis Zeps (https://sketchfab.com/zeps9001)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works
