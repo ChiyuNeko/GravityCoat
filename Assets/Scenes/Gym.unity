@@ -8126,7 +8126,7 @@ RectTransform:
   m_AnchorMin: {x: 0.15, y: 0.5}
   m_AnchorMax: {x: 0.85, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -50}
-  m_SizeDelta: {x: 0, y: 756}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &689899820
 MonoBehaviour:
@@ -17063,11 +17063,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8467853f6e51e42569a14eb486faceec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseCanvas:
+  phaseCanvasGroups:
   - {fileID: 1746743280}
   - {fileID: 1268754495}
   - {fileID: 16965053}
   - {fileID: 1145966332}
+  fadeOutDuration: 0.5
+  fadeInDuration: 0.5
+  countText: {fileID: 631049525}
+  CountDurationOffset: 1
 --- !u!1 &1583886897
 GameObject:
   m_ObjectHideFlags: 0
@@ -18829,7 +18833,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1746743279
 RectTransform:
   m_ObjectHideFlags: 0
