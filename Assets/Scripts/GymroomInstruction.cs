@@ -19,7 +19,6 @@ public class GymroomInstruction : MonoBehaviour {
 			phaseCanvasGroups[0].gameObject.SetActive(true);
 			currentPhaseIndex = 0;
 		}
-		CountdownFrom(15);
 	}
 
 	public void Update() {
@@ -39,6 +38,7 @@ public class GymroomInstruction : MonoBehaviour {
 				phaseCanvasGroups[fadeOutIndex].gameObject.SetActive(false);
 				currentPhaseIndex = index;
 				phaseCanvasGroups[currentPhaseIndex].gameObject.SetActive(true);
+				phaseCanvasGroups[currentPhaseIndex].alpha = 0f;
 				phaseCanvasGroups[currentPhaseIndex].DOFade(1f, fadeOutDuration);
 			});
 	}
@@ -54,7 +54,7 @@ public class GymroomInstruction : MonoBehaviour {
 				.OnComplete(() => {
 					countingNumber--;
 					countText.text = countingNumber.ToString();
-					if (countingNumber == 1) {
+					if (countingNumber == 0) {
 						countText.gameObject.SetActive(false);
 					}
 				});

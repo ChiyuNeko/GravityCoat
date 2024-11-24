@@ -24,6 +24,9 @@ public class GymroomFlow : MonoBehaviour {
 	private float waitCounter = 0f;
 
 	private void Update() {
+		if (Input.GetKeyDown(KeyCode.Space)) {
+			StartPhase();
+		}
 		if (currentPhase == Phase.None) {
 			return;
 		}
@@ -41,8 +44,8 @@ public class GymroomFlow : MonoBehaviour {
 
 	private void ChangeToNextPhase() {
 		//Current Phase Procedure
+		PhaseContent currentPhaseContent = phaseContents.FirstOrDefault(x => x.Phase == currentPhase);
 		if (currentPhase != Phase.None) {
-			PhaseContent currentPhaseContent = phaseContents.FirstOrDefault(x => x.Phase == currentPhase);
 			if (currentPhaseContent == null) {
 				Debug.Log(String.Format("Current PhaseContent of {0} does not exist! Reset to Phase-None", currentPhaseContent.ToString()));
 				currentPhase = Phase.None;
@@ -53,13 +56,21 @@ public class GymroomFlow : MonoBehaviour {
 		}
 
 		//Change Phase
-		int nextPhase = (int)currentPhase + 1;
-		if (nextPhase >= System.Enum.GetValues(typeof(Phase)).Length) {
-			Debug.Log(String.Format("All Phase Ended. Reset to Phase-None"));
-			currentPhase = Phase.None;
-			return;
+		if (currentPhase == Phase.None) {
+			currentPhase = Phase.Introduction;
+		} else {
+			if (currentPhaseContent.NextPhase != Phase.None) {
+				currentPhase = currentPhaseContent.NextPhase;
+			} else {
+				int nextPhase = (int)currentPhase + 1;
+				if (nextPhase >= System.Enum.GetValues(typeof(Phase)).Length) {
+					Debug.Log(String.Format("All Phase Ended. Reset to Phase-None"));
+					currentPhase = Phase.None;
+					return;
+				}
+				currentPhase = (Phase)nextPhase;
+			}
 		}
-		currentPhase = (Phase)nextPhase;
 
 		//Next Phase Procedure
 		PhaseContent nextPhaseContent = phaseContents.FirstOrDefault(x => x.Phase == currentPhase);
