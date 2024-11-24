@@ -7,10 +7,12 @@ public class LunarGameManager : MonoBehaviour
 {
     public List<GameObject> Planets;
     public List<float> SwitchTime; // timing for cloth charge befor enter next planets  
-    int index; // for record current state
     public float ExperientTime;
+    public Vector3 SwitchViewPoint;
     public UnityEvent OpenSwitchPlantEvnt = new UnityEvent();
     public UnityEvent CloseSwitchPlantEvnt = new UnityEvent();
+    
+    int index; // for record current state
 
     void Start()
     {
@@ -19,12 +21,11 @@ public class LunarGameManager : MonoBehaviour
             p.SetActive(false);
         }
 
-        Planets[0].SetActive(true);
         index = 0;
 
         //Initialized
 
-        GameStart();
+        //GameStart();
     }
 
     
@@ -41,6 +42,7 @@ public class LunarGameManager : MonoBehaviour
 
     public void GameStart() // Trigger the system
     {
+        Planets[0].SetActive(true);
         StartCoroutine(ExperientTimer(ExperientTime));
     }
 
@@ -58,6 +60,15 @@ public class LunarGameManager : MonoBehaviour
         else
             StartCoroutine(ExperientTimer(ExperientTime));
 
+    }
+
+    public void SwitchView(GameObject targetObject)
+    {
+        targetObject.transform.Translate(SwitchViewPoint);
+    }
+    public void ResetView(GameObject targetObject)
+    {
+        targetObject.transform.Translate(-SwitchViewPoint);
     }
 
     public void GameEnd() // Enter Ending scene

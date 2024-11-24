@@ -6650,6 +6650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09eab51138c3dec499ac5e0cd34f0beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _TextLoading: []
   WaitBetween: 0.14
   WaitEnd: 2
 --- !u!1 &7258294402955846448
