@@ -6,17 +6,17 @@ using DG.Tweening;
 
 public class SceneChanger : MonoBehaviour {
 	public static SceneChanger Instance;
-	[SerializeField] private CanvasGroup blackOverlayCanvasGroup;
+	[SerializeField] public CanvasGroup BlackOverlayCanvasGroup;
 	[SerializeField] private float fadeInDuration = 1f;
 	[SerializeField] private float fadeOutDuration = 1f;
 	private bool isSceneChanging = false;
 
 	private void Awake() {
-		blackOverlayCanvasGroup.GetComponent<Canvas>().worldCamera = Camera.main;
 		if (SceneChanger.Instance == null) {
 			DontDestroyOnLoad(this.gameObject);
 			Instance = this;
 		} else {
+			SceneChanger.Instance.BlackOverlayCanvasGroup.GetComponent<Canvas>().worldCamera = Camera.main;
 			Destroy(this.gameObject);
 		}
 	}
@@ -36,9 +36,9 @@ public class SceneChanger : MonoBehaviour {
 	public void ChangeToScene(int sceneIndex) {
 		if (isSceneChanging == true) return;
 		isSceneChanging = true;
-		blackOverlayCanvasGroup.gameObject.SetActive(true);
-		blackOverlayCanvasGroup.alpha = 0f;
-		blackOverlayCanvasGroup.DOFade(1f, fadeInDuration)
+		BlackOverlayCanvasGroup.gameObject.SetActive(true);
+		BlackOverlayCanvasGroup.alpha = 0f;
+		BlackOverlayCanvasGroup.DOFade(1f, fadeInDuration)
 			.OnComplete(() => {
 				SceneManager.LoadScene(sceneIndex);
 			});
@@ -47,9 +47,9 @@ public class SceneChanger : MonoBehaviour {
 
 	private void FadeOutBlackOverlay(Scene scene, LoadSceneMode mode) {
 		isSceneChanging = false;
-		blackOverlayCanvasGroup.DOFade(0f, fadeOutDuration)
+		BlackOverlayCanvasGroup.DOFade(0f, fadeOutDuration)
 			.OnComplete(() => {
-				blackOverlayCanvasGroup.gameObject.SetActive(false);
+				BlackOverlayCanvasGroup.gameObject.SetActive(false);
 			});
 		SceneManager.sceneLoaded -= FadeOutBlackOverlay;
 	}

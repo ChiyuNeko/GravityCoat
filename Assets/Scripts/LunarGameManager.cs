@@ -78,6 +78,12 @@ public class LunarGameManager : MonoBehaviour
     {
         title.text ="Thank For Playing!";
         GameEndEvnt?.Invoke();
+        StartCoroutine(Timer());
+    }
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(10);
+        SceneChanger.Instance.ChangeToScene(1);
     }
 
 
