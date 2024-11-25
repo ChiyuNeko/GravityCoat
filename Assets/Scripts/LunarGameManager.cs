@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class LunarGameManager : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class LunarGameManager : MonoBehaviour
     public List<float> SwitchTime; // timing for cloth charge befor enter next planets  
     public float ExperientTime;
     public Vector3 SwitchViewPoint;
+    public TextMeshProUGUI title;
     public UnityEvent OpenSwitchPlantEvnt = new UnityEvent();
     public UnityEvent CloseSwitchPlantEvnt = new UnityEvent();
+    public UnityEvent GameEndEvnt;
     
     int index; // for record current state
 
@@ -73,7 +76,8 @@ public class LunarGameManager : MonoBehaviour
 
     public void GameEnd() // Enter Ending scene
     {
-
+        title.text ="Thank For Playing!";
+        GameEndEvnt?.Invoke();
     }
 
 
