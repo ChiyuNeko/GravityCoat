@@ -13,76 +13,94 @@ public class WaterController : MonoBehaviour
     private bool hasSet90sMotor = false;
     private bool hasSet110sMotor = false;
     private bool hasSet140sMotor = false;
+    private bool hasSet170sMotor = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        hm.SetPWM(OutputPin.P4, 255); //®ğ»Ö
-        hm.SetPWM(OutputPin.P5, 0); //®ğ»Ö
-        hm.SetPWM(OutputPin.P7, 250); //¥k¤âÁu
-        //hm.SetPWM(OutputPin.P8, 250); //¥ª¤âÁu
-        //hm.SetPWM(OutputPin.P9, 250); //¤ô³UÄé¤ô ; ¤ô³U§l¤ô¬OP11
-        Debug.Log("Open motor");
+        // hm.SetPWM(OutputPin.P7, 250); //å³æ‰‹è‡‚
+        // hm.SetPWM(OutputPin.P8, 250); //å·¦æ‰‹è‡‚
+        // hm.SetPWM(OutputPin.P9, 250); //æ°´è¢‹çŒæ°´ ; æ°´è¢‹å¸æ°´æ˜¯P11
+        // Debug.Log("Open motor");
     }
 
-   /* void Update()
+    void Update()
     {
         float time = Time.timeSinceLevelLoad;
         if (!hasSetInitialValues)
         {
-            hm.SetPWM(OutputPin.P4, 0); // ®ğ»ÖÃö
-            hm.SetPWM(OutputPin.P5, 0);
+            hm.SetPWM(OutputPin.P7, 250); 
+            hm.SetPWM(OutputPin.P9, 250); 
             hasSetInitialValues = true;
         }
-        if (time >= 60 && !hasSet60sMotor)
+
+        // 26ç§’æ™‚æ°´è¢‹é¦¬é”åœæ­¢
+        if (time >= 26 && !hasSet60sMotor)
         {
-            Debug.Log("Close mototr Bag.");
+            Debug.Log("æ°´è¢‹åœæ­¢");
+            hm.SetPWM(OutputPin.P7, 0);
             hm.SetPWM(OutputPin.P9, 0);
             hasSet60sMotor = true;
         }
-        // 70¬í®É¥ş³¡°±¤î
-        if (time >= 70 && !hasSet70sMotor)
+
+        // 36ç§’æ™‚å…¨éƒ¨é–‹å§‹
+        if (time >= 36 && !hasSet70sMotor)
         {
             Debug.Log("Close mototr");
-            hm.SetPWM(OutputPin.P7, 0);
-            hm.SetPWM(OutputPin.P8, 0);
-            hm.SetPWM(OutputPin.P9, 0);
+            hm.SetPWM(OutputPin.P7, 250);
+            hm.SetPWM(OutputPin.P9, 250);
             hasSet70sMotor = true;
         }
 
-        // 90¬í®É¡A¤ô³U§l¤ô¡A¤âÁu¬ª¤ô
-        if (time >= 90 && !hasSet90sMotor)
+        // 102ç§’æ™‚åœæ­¢
+        if (time >= 102 && !hasSet90sMotor)
         {
             Debug.Log("Open mototr");
-            hm.SetPWM(OutputPin.P7, 250);
-            hm.SetPWM(OutputPin.P8, 250);
-            hm.SetPWM(OutputPin.P11, 250);
+            hm.SetPWM(OutputPin.P7, 0);
+            hm.SetPWM(OutputPin.P9, 0);
             hasSet90sMotor = true;
         }
 
-        // 90¬í®É®ğµo¶}¡A¤âÁu¬ª¤ô
-        if (time >= 90 && !hasSet90sValues)
+        // 112ç§’æ™‚çŒæ°´
+        if (time >= 112 && !hasSet90sValues)
         {
-            hm.SetPWM(OutputPin.P4, 255);
-            hm.SetPWM(OutputPin.P5, 255);
+            hm.SetPWM(OutputPin.P8, 250);
+            hm.SetPWM(OutputPin.P11, 250);
             hasSet90sValues = true;
         }
 
-        // 110¬í®É®ğµo¶}¡A¤âÁu°±¤î¡A¤ô³UÄ~Äò§l¤ô
-        if (time >= 110 && !hasSet110sMotor)
-        {
-            Debug.Log("Close mototr");
-            hm.SetPWM(OutputPin.P11, 250);
-            hm.SetPWM(OutputPin.P8, 0);
-            hm.SetPWM(OutputPin.P7, 0);
-            hasSet110sMotor = true;
-        }
-
-        if (time >= 145 && !hasSet140sMotor)
+        // 167ç§’æ™‚åœæ­¢æ´©æ°´
+        if (time >= 167 && !hasSet110sMotor)
         {
             Debug.Log("Close mototr");
             hm.SetPWM(OutputPin.P11, 0);
+            hm.SetPWM(OutputPin.P8, 0);
+            hasSet110sMotor = true;
+        }
+
+        // 177ç§’æ™‚æ´©æ°´
+        if (time >= 177 && !hasSet140sMotor)
+        {
+            Debug.Log("Close mototr");
+            hm.SetPWM(OutputPin.P11, 250);
+            hm.SetPWM(OutputPin.P8, 250);
             hasSet140sMotor = true;
         }
-    }*/
+
+        // 237ç§’æ™‚wåœæ­¢æ´©æ°´
+        if (time >= 237 && !hasSet170sMotor)
+        {
+            Debug.Log("Close mototr");
+            hm.SetPWM(OutputPin.P11, 0);
+            hm.SetPWM(OutputPin.P8, 0);
+            hasSet170sMotor = true;
+        }
+
+        // if (time >= 145 && !hasSet140sMotor)
+        // {
+        //     Debug.Log("Fæ°´è¢‹åœæ­¢å¸æ°´");
+        //     hm.SetPWM(OutputPin.P11, 0);
+        //     hasSet140sMotor = true;
+        // }
+    }
 }
