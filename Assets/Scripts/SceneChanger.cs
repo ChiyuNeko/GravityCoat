@@ -12,6 +12,7 @@ public class SceneChanger : MonoBehaviour {
 	private bool isSceneChanging = false;
 
 	private void Awake() {
+		blackOverlayCanvasGroup.GetComponent<Canvas>().worldCamera = Camera.main;
 		if (SceneChanger.Instance == null) {
 			DontDestroyOnLoad(this.gameObject);
 			Instance = this;
