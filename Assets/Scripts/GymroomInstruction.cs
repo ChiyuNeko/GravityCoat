@@ -6,9 +6,10 @@ using TMPro;
 
 public class GymroomInstruction : MonoBehaviour {
 	[SerializeField] private List<CanvasGroup> phaseCanvasGroups = new List<CanvasGroup>();
+	[SerializeField] private CanvasGroup scoreCanvasGroup;
 	private int currentPhaseIndex = 0;
-	[SerializeField] private float fadeOutDuration = 0.5f;
-	[SerializeField] private float fadeInDuration = 0.5f;
+	[SerializeField] private float fadeOutDuration = 1f;
+	[SerializeField] private float fadeInDuration = 1f;
 
 	[SerializeField] private TextMeshProUGUI countText;
 	public float CountDurationOffset = 1f;
@@ -18,12 +19,6 @@ public class GymroomInstruction : MonoBehaviour {
 		if (currentPhaseIndex < 0) {
 			phaseCanvasGroups[0].gameObject.SetActive(true);
 			currentPhaseIndex = 0;
-		}
-	}
-
-	public void Update() {
-		if (Input.GetKeyDown(KeyCode.Space)) {
-			FadeToNextCanvas(currentPhaseIndex + 1);
 		}
 	}
 
@@ -60,5 +55,12 @@ public class GymroomInstruction : MonoBehaviour {
 				});
 		}
 
+	}
+
+	public void FadeInScore() {
+		scoreCanvasGroup.gameObject.SetActive(true);
+		scoreCanvasGroup.alpha = 0f;
+		scoreCanvasGroup.DOFade(1f, fadeInDuration)
+			.SetDelay(fadeOutDuration);
 	}
 }

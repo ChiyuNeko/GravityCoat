@@ -43,6 +43,7 @@ public class GymroomFlow : MonoBehaviour {
 	}
 
 	private void ChangeToNextPhase() {
+		Debug.Log("Change");
 		//Current Phase Procedure
 		PhaseContent currentPhaseContent = phaseContents.FirstOrDefault(x => x.Phase == currentPhase);
 		if (currentPhase != Phase.None) {
@@ -71,18 +72,22 @@ public class GymroomFlow : MonoBehaviour {
 				currentPhase = (Phase)nextPhase;
 			}
 		}
+		Debug.Log(currentPhase);
 
 		//Next Phase Procedure
 		PhaseContent nextPhaseContent = phaseContents.FirstOrDefault(x => x.Phase == currentPhase);
+		Debug.Log(nextPhaseContent);
 		if (nextPhaseContent == null) {
 			Debug.Log(String.Format("Next PhaseContent of {0} does not exist! Reset to Phase-None", nextPhaseContent.ToString()));
 			currentPhase = Phase.None;
 			return;
 		}
+		waitCounter = nextPhaseContent.WaitDuration;
+		Debug.Log("hihi");
 		nextPhaseContent.OnPhaseStartEvent?.Invoke();
 		Debug.Log(String.Format("Phase-{0}: OnPhaseStartEvent Invoked at {1}.", currentPhase.ToString(), Time.time));
 
-		waitCounter = nextPhaseContent.WaitDuration;
+		Debug.Log(waitCounter);
 	}
 }
 
