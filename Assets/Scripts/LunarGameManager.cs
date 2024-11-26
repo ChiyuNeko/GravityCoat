@@ -6,6 +6,7 @@ using TMPro;
 
 public class LunarGameManager : MonoBehaviour
 {
+    public GameObject waterController;
     public List<GameObject> Planets;
     public List<float> SwitchTime; // timing for cloth charge befor enter next planets  
     public float ExperientTime;
@@ -31,6 +32,14 @@ public class LunarGameManager : MonoBehaviour
         //GameStart();
     }
 
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GameStart();
+        }
+    }
+
     
     IEnumerator ExperientTimer(float time)
     {
@@ -46,6 +55,7 @@ public class LunarGameManager : MonoBehaviour
     public void GameStart() // Trigger the system
     {
         Planets[0].SetActive(true);
+        waterController.GetComponent<WaterController>().enabled = true;
         StartCoroutine(ExperientTimer(ExperientTime));
     }
 
