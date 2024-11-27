@@ -1966,7 +1966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &588125148
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -7265,7 +7265,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &794363567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8310,10 +8310,10 @@ MonoBehaviour:
   - {fileID: 1328898107}
   - {fileID: 1815578600}
   SwitchTime:
-  - 26
-  - 66
-  - 55
-  ExperientTime: 10
+  - 10.6
+  - 60.2
+  - 42.5
+  ExperientTime: 50
   SwitchViewPoint: {x: 0, y: -100, z: 0}
   title: {fileID: 1702313666}
   OpenSwitchPlantEvnt:
@@ -28180,7 +28180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2079316633
 MonoBehaviour:
   m_ObjectHideFlags: 0
