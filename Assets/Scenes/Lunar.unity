@@ -2039,7 +2039,7 @@ GameObject:
   - component: {fileID: 626737331}
   - component: {fileID: 626737332}
   m_Layer: 0
-  m_Name: GameObject (2)
+  m_Name: Generater3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7365,7 +7365,7 @@ GameObject:
   - component: {fileID: 896471030}
   - component: {fileID: 896471031}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Generater2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7401,7 +7401,7 @@ MonoBehaviour:
   generater:
     GenerateIO: 0
     GenerateObject: {fileID: 5340876799740085745, guid: e669253a915a3e34e9d6b084680bfb1d, type: 3}
-    GeanerateFrequency: 0.1
+    GeanerateFrequency: 1
     GameObjectScale: 1
     GameObjectForce: {x: 175.97, y: -70.7, z: 0}
     GameObjectLifeTime: 20
@@ -7580,7 +7580,7 @@ GameObject:
   - component: {fileID: 977666185}
   - component: {fileID: 977666186}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Generater1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7616,7 +7616,7 @@ MonoBehaviour:
   generater:
     GenerateIO: 0
     GenerateObject: {fileID: 6519271333264143816, guid: fdcf0d88d5c4252459e4613b92589e78, type: 3}
-    GeanerateFrequency: 0.1
+    GeanerateFrequency: 0.3
     GameObjectScale: 1
     GameObjectForce: {x: 175.97, y: -70.7, z: 0}
     GameObjectLifeTime: 20
@@ -8553,7 +8553,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 1760354722}
+      - m_Target: {fileID: 79246384}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1433219966}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -9611,7 +9623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328898107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -126.89, y: -7.5, z: -125}
+  m_LocalPosition: {x: -126.89, y: -9.84, z: -125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22569,7 +22581,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1815578600}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.131164, y: 0.3, z: 30.174582}
+  m_LocalPosition: {x: 11.131164, y: -1.71, z: 30.174582}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
