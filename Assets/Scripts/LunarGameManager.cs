@@ -7,8 +7,11 @@ using TMPro;
 public class LunarGameManager : MonoBehaviour
 {
     public GameObject waterController;
+    public LunarGameObjectGenerater[] lunarGameObjectGenerater; 
     public List<GameObject> Planets;
     public List<float> SwitchTime; // timing for cloth charge befor enter next planets  
+    public List<AudioSource> pre_audios;
+    public List<AudioSource> audios;
     public float ExperientTime;
     public Vector3 SwitchViewPoint;
     public TextMeshProUGUI title;
@@ -17,6 +20,7 @@ public class LunarGameManager : MonoBehaviour
     public UnityEvent GameEndEvnt;
     
     int index; // for record current state
+    Vector3 force;
 
     void Start()
     {
@@ -30,10 +34,37 @@ public class LunarGameManager : MonoBehaviour
         //Initialized
 
         //GameStart();
+        force = lunarGameObjectGenerater[0].generater.GameObjectForce;
     }
 
     void Update()
     {
+        switch (index)
+        {
+            case 0:
+                for(int i = 0; i < 3; i++)
+                {
+                    lunarGameObjectGenerater[i].generater.GameObjectForce = force * 0.3f;
+                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 0.3f;
+                }
+                break;
+            case 1:
+                for(int i = 0; i < 3; i++)
+                    {
+                        lunarGameObjectGenerater[i].generater.GameObjectForce = force * 1.5f;
+                        lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1.5f;
+                    }
+                break;
+            case 2:
+                for(int i = 0; i < 3; i++)
+                    {
+                        lunarGameObjectGenerater[i].generater.GameObjectForce = force;
+                        lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1;
+                    }
+                break;
+            
+        }
+
         if(Input.GetKeyDown(KeyCode.Space))
         {
             GameStart();
@@ -43,9 +74,10 @@ public class LunarGameManager : MonoBehaviour
     
     IEnumerator ExperientTimer(float time)
     {
-
+        pre_audios[index].Play();
         OpenSwitchPlantEvnt?.Invoke(); // Open Switch Scene
         yield return new WaitForSeconds(SwitchTime[index]);
+        audios[index].Play();
         CloseSwitchPlantEvnt?.Invoke();// Close Switch Scene
 
         yield return new WaitForSeconds(time);
@@ -93,7 +125,16 @@ public class LunarGameManager : MonoBehaviour
     IEnumerator Timer()
     {
         yield return new WaitForSeconds(10);
-        SceneChanger.Instance.ChangeToScene(1);
+        //SceneChanger.Instance.ChangeToScene(1);
+    }
+    public void StartIntro()
+    {
+        StartCoroutine(IntroTimer());
+    }
+    public IEnumerator IntroTimer()
+    {
+        yield return new WaitForSeconds(20);
+        GameStart();
     }
 
 
