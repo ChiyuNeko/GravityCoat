@@ -45,7 +45,7 @@ public class LunarGameManager : MonoBehaviour
                 for(int i = 0; i < 3; i++)
                 {
                     lunarGameObjectGenerater[i].generater.GameObjectForce = force * 1f;
-                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1f;
+                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 0.7f;
                 }
                 break;
             case 1:
@@ -118,7 +118,7 @@ public class LunarGameManager : MonoBehaviour
 
     public void GameEnd() // Enter Ending scene
     {
-        title.text ="Thank For Playing!";
+        title.text ="Thanks For Playing!";
         GameEndEvnt?.Invoke();
         StartCoroutine(Timer());
     }

@@ -31,24 +31,24 @@ public class WaterControllerGym : MonoBehaviour
     void Update()
     {
         float time = Time.timeSinceLevelLoad  - StartTime;
-        if (!hasSetInitialValues)
+        if (time >= 10 && !hasSetInitialValues)
         {
-            hm.SetPWM(OutputPin.P8, 250); 
-            hm.SetPWM(OutputPin.P11, 250); 
+            hm.SetPWM(OutputPin.P7, 250); 
+            hm.SetPWM(OutputPin.P9, 250); 
             hasSetInitialValues = true;
         }
 
         // 7秒時抽水馬達停止
-        if (time >= 17 && !hasSet60sMotor)
+        if (time >= 20 && !hasSet60sMotor)
         {
             Debug.Log("水袋停止");
-            hm.SetPWM(OutputPin.P8, 0);
-            hm.SetPWM(OutputPin.P11, 0);
+            hm.SetPWM(OutputPin.P7, 0);
+            hm.SetPWM(OutputPin.P9, 0);
             hasSet60sMotor = true;
         }
 
         // 52秒時灌水開始
-        if (time >= 62 && !hasSet70sMotor)
+        if (time >= 40 && !hasSet70sMotor)
         {
             Debug.Log("Close mototr");
             hm.SetPWM(OutputPin.P7, 250);
@@ -57,7 +57,7 @@ public class WaterControllerGym : MonoBehaviour
         }
 
         // 73秒時灌水停止
-        if (time >= 83 && !hasSet90sMotor)
+        if (time >= 50 && !hasSet90sMotor)
         {
             Debug.Log("Open mototr");
             hm.SetPWM(OutputPin.P7, 0);
@@ -66,7 +66,7 @@ public class WaterControllerGym : MonoBehaviour
         }
 
         // 88秒時灌水
-        if (time >= 98 && !hasSet90sValues)
+        if (time >= 70 && !hasSet90sValues)
         {
             hm.SetPWM(OutputPin.P7, 250);
             hm.SetPWM(OutputPin.P9, 250);
@@ -74,7 +74,7 @@ public class WaterControllerGym : MonoBehaviour
         }
 
         // 109秒時停止灌水
-        if (time >= 19 && !hasSet110sMotor)
+        if (time >= 80 && !hasSet110sMotor)
         {
             Debug.Log("Close mototr");
             hm.SetPWM(OutputPin.P7, 0);
