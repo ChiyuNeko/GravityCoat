@@ -2462,7 +2462,7 @@ MonoBehaviour:
     GeanerateFrequency: 1
     GameObjectScale: 1
     GameObjectForce: {x: 175.97, y: -70.7, z: 0}
-    GameObjectLifeTime: 25
+    GameObjectLifeTime: 10
     GenerateZone: {x: 0, y: 2.27, z: 3.76}
     GenerateEvnt:
       m_PersistentCalls:
@@ -7777,7 +7777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &794363567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7916,7 +7916,7 @@ MonoBehaviour:
     GeanerateFrequency: 1
     GameObjectScale: 1
     GameObjectForce: {x: 175.97, y: -70.7, z: 0}
-    GameObjectLifeTime: 25
+    GameObjectLifeTime: 10
     GenerateZone: {x: 0, y: 2.27, z: 3.76}
     GenerateEvnt:
       m_PersistentCalls:
@@ -8131,7 +8131,7 @@ MonoBehaviour:
     GeanerateFrequency: 0.3
     GameObjectScale: 1
     GameObjectForce: {x: 175.97, y: -70.7, z: 0}
-    GameObjectLifeTime: 25
+    GameObjectLifeTime: 10
     GenerateZone: {x: 0, y: 2.27, z: 8.53}
     GenerateEvnt:
       m_PersistentCalls:
@@ -8955,8 +8955,8 @@ MonoBehaviour:
   - {fileID: 1815578600}
   SwitchTime:
   - 10.6
-  - 60.2
-  - 42.5
+  - 50.2
+  - 32.5
   pre_audios:
   - {fileID: 611249765}
   - {fileID: 97750912}
@@ -29575,7 +29575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2079316633
 MonoBehaviour:
   m_ObjectHideFlags: 0

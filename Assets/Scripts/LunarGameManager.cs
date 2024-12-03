@@ -44,23 +44,23 @@ public class LunarGameManager : MonoBehaviour
             case 0:
                 for(int i = 0; i < 3; i++)
                 {
-                    lunarGameObjectGenerater[i].generater.GameObjectForce = force * 0.3f;
-                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 0.3f;
+                    lunarGameObjectGenerater[i].generater.GameObjectForce = force * 1f;
+                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1f;
                 }
                 break;
             case 1:
                 for(int i = 0; i < 3; i++)
-                    {
-                        lunarGameObjectGenerater[i].generater.GameObjectForce = force * 1.5f;
-                        lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1.5f;
-                    }
+                {
+                    lunarGameObjectGenerater[i].generater.GameObjectForce = force * 2.0f;
+                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 2.0f;
+                }
                 break;
             case 2:
                 for(int i = 0; i < 3; i++)
-                    {
-                        lunarGameObjectGenerater[i].generater.GameObjectForce = force;
-                        lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1;
-                    }
+                {
+                    lunarGameObjectGenerater[i].generater.GameObjectForce = force * 1.5f;
+                    lunarGameObjectGenerater[i].generater.GeanerateFrequency = 1.5f;
+                }
                 break;
             
         }
