@@ -57,7 +57,7 @@ public class WaterController : MonoBehaviour
         }
 
         // 120.8秒時停止
-        if (time >= 120.8f && !hasSet90sMotor)
+        if (time >= 110.8f && !hasSet90sMotor)
         {
             Debug.Log("Open mototr");
             hm.SetPWM(OutputPin.P7, 0);
@@ -66,7 +66,7 @@ public class WaterController : MonoBehaviour
         }
 
         // 170.8秒時灌水
-        if (time >= 170.8f && !hasSet110sMotor)
+        if (time >= 160.8f && !hasSet110sMotor)
         {
             hm.SetPWM(OutputPin.P8, 250);
             hm.SetPWM(OutputPin.P11, 250);
@@ -74,7 +74,7 @@ public class WaterController : MonoBehaviour
         }
 
         // 213.3秒時停止洩水
-        if (time >= 213.3f && !hasSet140sMotor)
+        if (time >= 203.3f && !hasSet140sMotor)
         {
             Debug.Log("Close mototr");
             hm.SetPWM(OutputPin.P11, 0);

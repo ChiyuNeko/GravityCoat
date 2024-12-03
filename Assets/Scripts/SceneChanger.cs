@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.Events;
+using fofulab;
 
 public class SceneChanger : MonoBehaviour {
 	public static SceneChanger Instance;
@@ -10,6 +12,10 @@ public class SceneChanger : MonoBehaviour {
 	[SerializeField] private float fadeInDuration = 1f;
 	[SerializeField] private float fadeOutDuration = 1f;
 	private bool isSceneChanging = false;
+    [SerializeField] private HapticMaker hm;
+	public UnityEvent OnPPressed;
+	public UnityEvent On0Pressed;
+	
 
 	private void Awake() {
 		if (SceneChanger.Instance == null) {
@@ -30,6 +36,20 @@ public class SceneChanger : MonoBehaviour {
 		}
 		if (Input.GetKeyDown(KeyCode.R)) {
 			ChangeToScene(0);
+		}
+
+		if (Input.GetKeyDown(KeyCode.P)) {
+			hm.SetPWM(OutputPin.P7, 0);
+            hm.SetPWM(OutputPin.P9, 0);
+			hm.SetPWM(OutputPin.P8, 0);
+            hm.SetPWM(OutputPin.P11, 0);
+			OnPPressed?.Invoke();
+		}
+
+		if (Input.GetKeyDown(KeyCode.Alpha0)) {
+			On0Pressed?.Invoke();
+			hm.SetPWM(OutputPin.P8, 150);
+            hm.SetPWM(OutputPin.P11, 150);
 		}
 	}
 

@@ -11,16 +11,6 @@ public class PlayModePositionSetterEditor : Editor
         // Draw the default Inspector UI
         DrawDefaultInspector();
 
-        // Display saved variables (if any)
-        EditorGUILayout.Space();
-        EditorGUILayout.LabelField("Saved Transform Values", EditorStyles.boldLabel);
-        if (Application.isPlaying) {
-            EditorGUILayout.Vector3Field("Saved Position", PlayModePositionSetter.savedPosition);
-            EditorGUILayout.Vector3Field("Saved Euler Angle", PlayModePositionSetter.savedEulerAngles);
-            EditorGUILayout.Vector3Field("Saved Scale", PlayModePositionSetter.savedScale);
-        } else {
-            EditorGUILayout.HelpBox("No transform values have been saved yet.", MessageType.Info);
-        }
         EditorGUILayout.Space();
         if (GUILayout.Button("Save Current Transform"))
         {
