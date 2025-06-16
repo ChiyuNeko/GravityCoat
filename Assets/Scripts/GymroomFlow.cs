@@ -23,16 +23,25 @@ public class GymroomFlow : MonoBehaviour {
 
 	private float waitCounter = 0f;
 
-	private void Update() {
-		if (Input.GetKeyDown(KeyCode.Space)) {
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
 			StartPhase();
 		}
-		if (currentPhase == Phase.None) {
+		if (currentPhase == Phase.None)
+		{
 			return;
 		}
 		waitCounter -= Time.deltaTime;
-		if (waitCounter <= 0f) {
+		if (waitCounter <= 0f)
+		{
 			ChangeToNextPhase();
+		}
+		if (Input.GetKeyDown(KeyCode.Q))
+		{
+			currentPhase = Phase.BattleroptExercise;
+
 		}
 	}
 
